@@ -1,0 +1,17 @@
+# GPU-specific requirements for Windows with CUDA
+# Install these FIRST before the main requirements.txt
+
+# PyTorch with CUDA support for Windows
+# For CUDA 11.8 (most compatible)
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch>=2.0.0,<3.0.0
+torchaudio>=2.0.0,<3.0.0
+torchvision>=0.15.0,<1.0.0
+
+# Alternative for CUDA 12.1 (if you have newer GPU drivers)
+# --extra-index-url https://download.pytorch.org/whl/cu121
+# torch>=2.0.0,<3.0.0
+# torchaudio>=2.0.0,<3.0.0
+# torchvision>=0.15.0,<1.0.0
+
+# Verify CUDA installation with: python -c "import torch; print(torch.cuda.is_available())"
